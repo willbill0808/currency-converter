@@ -24,7 +24,7 @@ def ValidCheck(Valuta1, Valuta2, Sum):
         Valid3 = False 
     
 
-    print(f"[TERMINAL][CHECK] Done! Returning: {Valid1, Valid2}")
+    print(f"[TERMINAL][CHECK] Done! Returning: {Valid1, Valid2, Valid3, Sum}")
     return Valid1, Valid2, Valid3, Sum  
 
 
