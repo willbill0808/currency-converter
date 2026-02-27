@@ -2,25 +2,22 @@ import requests, json
 import FreeSimpleGUI as sg
 
 key = "41fbc09ec63832a7ac810d4d"
-GC = "USD" #Given Currency
-WRC = "NOK" # Wanted Returned Currency
-amount = 40
 
-def ValidCheck(Value1, Value2, Value3):
+def ValidCheck(Valuta1, Valuta2, Sum):
     print(f"\n[TERMINAL][CHECK] Testing...")
-    print(f"[TERMINAL][CHECK] Recived {Value1 = } {Value2 = } {Value3 = }")
+    print(f"[TERMINAL][CHECK] Recived {Valuta1 = } {Valuta2 = } {Sum = }")
     Valid1 = False
     Valid2 = False
     Valid3 = False
 
     for i in CurrencyList:
-        if Value1 == i:
+        if Valuta1 == i:
             Valid1 = True
-        if Value2 == i:
+        if Valuta2 == i:
             Valid2 = True  
     
     try:
-        Value3 = float(Value3)
+        Sum = float(Sum)
         Valid3 = True
     
     except:
@@ -28,9 +25,9 @@ def ValidCheck(Value1, Value2, Value3):
     
 
     print(f"[TERMINAL][CHECK] Done! Returning: {Valid1, Valid2}")
-    return Valid1, Valid2, Valid3, Value3
-        
-    
+    return Valid1, Valid2, Valid3, Sum  
+
+
 
 def MakeList():
     print(f"[\nTERMINAL][MAKE_LIST] Starting...")
@@ -56,6 +53,7 @@ def MakeList():
     return CurrencyList
 
 
+
 def GetValue(key, GC, WRC, amount):
     print(f"\n[TERMINAL][GET_VALUE] Starting...")
 
@@ -77,12 +75,11 @@ def GetValue(key, GC, WRC, amount):
     print(f"[TERMINAL][GET_VALUE]] Done! Returning: {GCV, WRCV}")
     return GCV, WRCV
 
-CurrencyList = MakeList()
-
 #CurrencyList = ['USD', 'NOK', 'GBP']
 
 event = None
 
+CurrencyList = MakeList()
 layout1 = [
         [sg.Text("Which currency would you like to convert from:", key='-Disp1-')],
         [sg.Combo(CurrencyList, default_value='NOK', key='-Cur1-', readonly = True)],
@@ -105,9 +102,10 @@ while event != "-End-":
     print(f"[TERMINAL][WINDOW] {values = }")
 
     if event == "-Finish-":
-        Valid1, Valid2, Valid3, Value3 = ValidCheck(values["-Cur1-"], values["-Cur2-"], values["-Amount-"])
+        #sjekker om alle verdier er gode
+        Valid1, Valid2, Valid3, Value3 = ValidCheck(values["-Cur1-"], values["-Cur2-"], values["-Amount-"]) 
 
-        if Valid1 == False:
+        if Valid1 == False: 
             window["-Disp1-"].update("Which currency would you like to convert from (Must be a valid answer picked from the box):")
         else:
             window["-Disp1-"].update("Which currency would you like to convert from:")
@@ -126,12 +124,6 @@ while event != "-End-":
             GCV, WRCV = GetValue(key, values["-Cur1-"], values["-Cur2-"], Value3)
             window["-Output-"].update(f"{GCV} {values["-Cur1-"]} is {WRCV} in {values["-Cur2-"]} ")
 
-
-
-            
-        
-
-        
     
     
 window.close()
