@@ -1,34 +1,62 @@
 # Currency converter
 
-dependencies:
+## Dependencies:
+- python3
+- pip
+- tk
 
-python3
-pip
-tk
 
- 
-## For bruker
-For at appen skal fungere må du passe på at alle dependencies er lastet ned.
+## Starting av appen 
 
-Når du er sikker kan du kjøre:
+### 1. Installer avhengigheter
+
+Kjør:
+
 pip install requests FreeSimpleGUI
 
-Dette er slutten av instalerings fasen.
+---
 
-Så kjører du:
-Python3 -m venv .venv  
+### 2. Opprett virtuelt miljø
 
-Dette definerer et virtuelt enviroment, som trengs for å kjøre appen.
+Kjør:
 
-Skriv deretter: 
+python3 -m venv .venv
+
+Aktiver miljøet:
+
+Mac/Linux:
 source .venv/bin/activate
 
-Da går du inn i envioromentet.
+Windows:
+.venv\Scripts\activate
 
-Når du da skriver: 
+---
+
+### 3. Start programmet
+
+Kjør:
+
 python3 convert.py
 
-Så kjører du appen.
+Programmet vil nå starte.
+
+## Hvordan bruke programmet
+
+1. Start programmet ved å kjøre:
+
+   python3 convert.py
+
+2. Velg valuta du vil konvertere fra i første nedtrekksmeny.
+
+3. Velg valuta du vil konvertere til i andre nedtrekksmeny.
+
+4. Skriv inn beløpet du vil konvertere i input-feltet.
+
+5. Trykk på "Convert".
+
+6. Resultatet vises nederst i vinduet.
+
+7. Trykk på "End" for å avslutte programmet.
 
 ## Funksjoner
 
