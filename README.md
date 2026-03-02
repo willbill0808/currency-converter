@@ -8,27 +8,27 @@ tk
 
  
 # for bruker
-for at appen skal fungere må du passe på at alle dependencies er lastet ned.
+For at appen skal fungere må du passe på at alle dependencies er lastet ned.
 
-når du er sikker kan du kjøre:
+Når du er sikker kan du kjøre:
 pip install requests FreeSimpleGUI
 
-dette er slutten av instalerings fasen.
+Dette er slutten av instalerings fasen.
 
-så kjører du:
-python3 -m venv .venv  
+Så kjører du:
+Python3 -m venv .venv  
 
-dette definerer et virtuelt enviroment, som trengs for å kjøre appen.
+Dette definerer et virtuelt enviroment, som trengs for å kjøre appen.
 
-skriv deretter: 
+Skriv deretter: 
 source .venv/bin/activate
 
-da går du inn i envioromentet.
+Da går du inn i envioromentet.
 
-når du da skriver: 
+Når du da skriver: 
 python3 convert.py
 
-så kjører du appen.
+Så kjører du appen.
 
 # funksjon
 
