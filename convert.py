@@ -24,7 +24,7 @@ def ValidCheck(Valuta1, Valuta2, Sum):
         Valid3 = False 
     
 
-    print(f"[TERMINAL][CHECK] Done! Returning: {Valid1, Valid2, Valid3, Sum}")
+    print(f"[TERMINAL][CHECK] Done! Returning: {Valid1, Valid2, Valid3, Sum }")
     return Valid1, Valid2, Valid3, Sum  
 
 
@@ -88,7 +88,7 @@ layout1 = [
         [sg.Text("What should the base currency be:", key='-Text3-')],
         [sg.Input(key='-Amount-')],
         [sg.Text("your answer will be displayed here", key='-Output-')],
-        [sg.OK("Finish", key='-Finish-'), sg.OK("End", key='-End-')]
+        [sg.OK("Convert", key='-Finish-'), sg.OK("End", key='-End-')]
         ]
 
 window = sg.Window('Currency_Converter', layout1)
@@ -122,7 +122,7 @@ while event != "-End-":
 
         if Valid1 and Valid2 and Valid3:
             GCV, WRCV = GetValue(key, values["-Cur1-"], values["-Cur2-"], Value3)
-            window["-Output-"].update(f"{GCV} {values["-Cur1-"]} is {WRCV} in {values["-Cur2-"]} ")
+            window["-Output-"].update(f"{round(GCV, 2)} {values["-Cur1-"]} is {round(WRCV, 2)} in {values["-Cur2-"]} ")
 
     
     
