@@ -12,7 +12,7 @@
 
 Kjør:
 
-pip install requests FreeSimpleGUI
+> pip install requests FreeSimpleGUI
 
 ---
 
@@ -20,15 +20,15 @@ pip install requests FreeSimpleGUI
 
 Kjør:
 
-python3 -m venv .venv
+> python3 -m venv .venv
 
 Aktiver miljøet:
 
 Mac/Linux:
-source .venv/bin/activate
+> source .venv/bin/activate
 
 Windows:
-.venv\Scripts\activate
+> .venv\Scripts\activate
 
 ---
 
@@ -36,7 +36,7 @@ Windows:
 
 Kjør:
 
-python3 convert.py
+> python3 convert.py
 
 Programmet vil nå starte.
 
@@ -44,7 +44,7 @@ Programmet vil nå starte.
 
 1. Start programmet ved å kjøre:
 
-   python3 convert.py
+> python3 convert.py
 
 2. Velg valuta du vil konvertere fra i første nedtrekksmeny.
 
