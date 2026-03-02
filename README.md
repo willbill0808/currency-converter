@@ -1,4 +1,4 @@
-# currency converter
+# Currency converter
 
 dependencies:
 
@@ -7,7 +7,7 @@ pip
 tk
 
  
-# for bruker
+# For bruker
 For at appen skal fungere må du passe på at alle dependencies er lastet ned.
 
 Når du er sikker kan du kjøre:
@@ -30,5 +30,5 @@ python3 convert.py
 
 Så kjører du appen.
 
-# funksjon
+# Funksjon
 
