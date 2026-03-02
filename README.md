@@ -8,13 +8,15 @@
 
 ## Starting av appen 
 
+Alt som skal skrives i terminalen skrives sånn:
+> terminal code
+
 ### 1. Installer avhengigheter
 
 Kjør:
 
 > pip install requests FreeSimpleGUI
 
----
 
 ### 2. Opprett virtuelt miljø
 
@@ -30,7 +32,6 @@ Mac/Linux:
 Windows:
 > .venv\Scripts\activate
 
----
 
 ### 3. Start programmet
 
